@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+  <title>Diabetic Retinopathy Detector</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+    }
+    .container {
+      padding: 80px 120px;
+    }
+    .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+    } 
+    .carousel-caption h3 {
+      color: #fff !important;
+    }
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+      }
+    }
+    .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+    }
+    .person:hover {
+      border-color: #f1f1f1;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+    }
+    .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+    }
+    .navbar-nav li a:hover {
+      color: #fff !important;
+    }
+    .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+    }
+    .navbar-default .navbar-toggle {
+      border-color: transparent;
+    }
+
+    .nav-tabs li a {
+      color: #777;
+    }
+    .button1{
+      width: 30%;
+      text-align: center;
+      margin: auto;
+    }
+    .info {
+      background-color: #e7f3fe;
+      border-left: 6px solid #2196F3;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#myPage">Diabetic Retinopathy Detector</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#myPage">HOME</a></li>
+              <li><a href="#band">ABOUT</a></li>
+              <li><a href="#tour">SYMPTOMS</a></li>
+              <li><a href="#contact">RISK FACTORS</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="retinopathy eye.jpg" alt="retinopathy eye" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Diabetic Retinopathy Eye</h3>
+          <p>A complication of diabetes where blood vessels in the eye are damaged.</p>
+        </div>      
+      </div> 
+
+      <div class="item">
+        <img src="eye anatomy.jpg" alt="eye anatomy" width="1200" height="700">    
+      </div>
+    
+      <div class="item">
+        <img src="healthy vs unhealthy.jpg" alt="healthy vs unhealthy" width="1200" height="700">   
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The About Section) -->
+<div id="band" class="container text-center">
+    <h3><b>What is Diabetic Retinopathy ?</b></h3><br>
+    <p><em>Diabetic eye disease, DED !</em></p>
+    <p>Diabetic retinopathy, also known as diabetic eye disease (DED), is a medical condition
+      in which damage occurs to the retina due to diabetes mellitus. It is a leading cause of blindness
+      in developed countries.Retinopathy affects up to 80 percent of those who have had
+      diabetes for 20 years or more. At least 90% of new cases could be reduced with proper treatment
+      and monitoring of the eyes. The longer a person has diabetes, the higher his or her chances of 
+      developing diabetic retinopathy. Each year in the United States, diabetic retinopathy accounts
+      for 12% of all new cases of blindness. It is also the leading cause of blindness in people 
+      aged 20 to 64.At first, diabetic retinopathy may cause no symptoms or only mild vision problems.
+      Eventually, it can cause blindness.The condition can develop in anyone who has type 1 or type 2 
+      diabetes.</p>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Moderate nonproliferative retinopathy</strong></p><br>
+        <a href="#demo" data-toggle="collapse">
+          <img src="moderate retinopathy.jpg" class="img-circle person" alt="Random Name">
+        </a>
+        <div id="demo" class="collapse">
+          <p>Moderate nonproliferative diabetic retinopathy includes the presence of hemorrhages,
+             microaneurysms, and hard exudates.With this condition, soft exudates, venous beading, 
+             and intraretinal microvascular abnormalities occur less frequently than with severe NPDR.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Severe nonproliferative retinopathy</strong></p><br>
+        <a href="#demo2" data-toggle="collapse">
+          <img src="severe retinopathy.jpg" class="img-circle person" alt="Random Name">
+        </a>
+        <div id="demo2" class="collapse">
+          <p>Severe nonproliferative diabetic retinopathy includes the blood vessels in the retina
+             are weakened. Tiny bulges in the blood vessels, called microaneurysms, may leak fluid 
+             into the retina. This leakage may lead to swelling of the macula.</p>
+        </div> 
+      </div>
+      <div class="col-sm-4">
+        <p class="text-center"><strong>Proliferative retinopathy</strong></p><br>
+        <a href="#demo3" data-toggle="collapse">
+          <img src="proliferative retinopathy.jpg" class="img-circle person" alt="Random Name">
+        </a>
+        <div id="demo3" class="collapse">
+          <p>Proliferative diabetic retinopathy is the body's attempt to save its retina but it can 
+            often lead scarring of the retina and can cause the retina to detach, leading to blindness. 
+            Modern eye treatment can help to prevent blindness from occurring as a result of
+            proliferative retinopathy.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Container (The Symptoms Section) -->
+<div id="tour" class="container text-center">
+  <h3><b>Symptoms</b></h3><br>
+  <p><em>Let's have a look!</em></p>
+  <p>Diabetic retinopathy often has no early warning signs. Even macular edema, which can cause rapid 
+    vision loss, may not have any warning signs for some time. In general, however, a person with 
+    macular edema is likely to have blurred vision, making it hard to do things like read or drive. 
+    In some cases, the vision will get better or worse during the day.<br><br>The first stage, called 
+    non-proliferative diabetic retinopathy (NPDR), has no symptoms. Patients may not notice the signs
+    and have 20/20 vision. The only way to detect NPDR is by fundus examination by direct or indirect
+    ophthalmoscope by a trained ophthalmologist, fundus photography can be used for objective 
+    documentation of the fundus findings, in which microaneurysms (microscopic blood-filled bulges
+    in the artery walls) can be seen. If there is reduced vision, fluorescein angiography can show
+    narrowing or blocked retinal blood vessels clearly (lack of blood flow or retinal ischemia).<br><br>
+    Macular edema, in which blood vessels leak their contents into the macular region, can occur at 
+    any stage of NPDR. Its symptoms are blurred vision and darkened or distorted images that are 
+    not the same in both eyes. Ten percent (10%) of diabetic patients will have vision loss related 
+    to macular edema. Optical Coherence Tomography can show areas of retinal thickening due to fluid
+    accumulation from macular edema.In the second stage, abnormal new blood vessels (neovascularisation)
+    form at the back of the eye as part of proliferative diabetic retinopathy (PDR); these can burst
+    and bleed (vitreous hemorrhage) and blur the vision, because these new blood vessels are fragile.
+    The first time this bleeding occurs, it may not be very severe. In most cases, it will leave just
+    a few specks of blood, or spots floating in a person's visual field which may last for months.<br><br>
+    These spots are often followed within a few days or weeks by a much greater leakage of blood, 
+    which blurs the vision. In extreme cases, a person may only be able to tell light from dark in 
+    that eye. It may take the blood anywhere from a few days to months or even years to clear from the
+    inside of the eye, and in some cases the blood will not clear. These types of large hemorrhages 
+    tend to happen more than once.<br><br>On funduscopic exam, a doctor will see cotton wool spots, flame
+    hemorrhages, and dot-blot hemorrhages.
+  </p>
+</div>
+
+<!-- Container (The Risk Factors Section) -->
+<div id="contact" class="container text-center">
+  <h3><b>Risk Factors </b></h3><br>
+  <p>All people with diabetes are at risk – those with Type I diabetes and those with Type 2 diabetes. 
+    The longer a person has had diabetes, the higher their risk of developing some ocular problem.
+    Between 40 and 45 percent of Americans diagnosed with diabetes have some stage of diabetic 
+    retinopathy.After 20 years of diabetes, nearly all patients with Type I diabetes and > 60% of 
+    patients with Type II diabetes have some degree of retinopathy; however, these statistics were 
+    published in 2002 using data from four years earlier, limiting the usefulness of the research. 
+    The subjects would have been diagnosed with diabetes in the late 1970s, before modern fast-acting
+    insulin .<br><br>Prior studies had also assumed a clear glycemic threshold
+    between people at high and low risk of diabetic retinopathy.Published rates vary between trials, 
+    the proposed explanation being differences in study methods and reporting of prevalence rather than
+    incidence values.During pregnancy, diabetic retinopathy may also be a problem for women with
+    diabetes.
+  </p>
+  <h3 class="text-center">Check Your's</h3>
+    <p class="text-center"><em>We care your health! In the end , we only regret the chances we did'nt take.</em></p>
+    <div class="button1">
+       <input type="file" class="form-control" id="customFile" />
+    </div><br>
+    <div class="info">
+      <p><strong>NOTE: </strong>Please Upload .JPG image /.PNG image</p>
+    </div>
+    <button type="button" class="btn btn-success">Scan Now</button>
+
+</div>
+
+<div class="container">
+  <h3 class="text-center">From The Blog</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Vishal</a></li>
+    <li><a data-toggle="tab" href="#menu1">Sukesh</a></li>
+    <li><a data-toggle="tab" href="#menu2">Yuvaraja</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h2>Vishal D, UI Creator</h2>
+      <p>Design creates culture. Culture shapes values. Values determine the future.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h2>Sukesh P, ML Model Creator</h2>
+      <p>The development of full artificial intelligence could spell the end of the human race</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h2>Yuvaraja P, UI Creator</h2>
+      <p>Design creates culture. Culture shapes values. Values determine the future.</p>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+    
+        // Prevent default anchor click behavior
+        event.preventDefault();
+    
+        // Store hash
+        var hash = this.hash;
+    
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+    
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+          });
+        } // End if
+      });
+    })
+</script>
+
+</body>
+</html>
+
